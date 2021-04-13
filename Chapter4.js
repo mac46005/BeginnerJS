@@ -53,3 +53,17 @@ function reverseArrayInPlace(...array){
 
 console.log(reverseArray.name + ": " + reverseArray(someArray));
 console.log(reverseArrayInPlace.name + ": " +reverseArrayInPlace([6,5,4,3,2,1]));
+
+// 4-3 A List
+//list example
+let list = {
+    value: 1,
+    rest:{
+        value:2,
+        rest:{
+            value: 3,
+            rest: null
+        }
+    }
+}
+console.log(list);
