@@ -1,14 +1,18 @@
 // Chapter 4 Excersizes
 
 // 4-1 The Sum of a range
-function range(start,end){
+function range(start,end,step = 1){
+    let count = start;
     let array = [];
-    for(x = start; x < end + 1; x++){
-        array.push(x)
+    while (count < end + 1) {
+        array.push(count);
+        count += step;
     }
     return array;
 }
 console.log(range(3,9));
+
+console.log(range(10,4,-1));
 
 function sum(array){
     let s = 0;
@@ -17,4 +21,4 @@ function sum(array){
     }
     return s;
 }
-console.log(sum(range(3,9)));
+//console.log(sum(range(3,9)));
