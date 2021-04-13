@@ -1,47 +1,65 @@
-// 2-1 Minimum
-function min(x,y){
-    if(y > x){
-        return y;
+//prompt();
+
+//Chapter 2 Excercises
+
+// 2-1 Looping Triangle
+//Write a loop that makes seven calls to console.log to output the following
+//#
+//##
+//###
+//####
+//#####
+//######
+//#######
+
+let hash = '#';
+let string = "";
+for (let x = 0; x < 7; x++){
+
+    string += hash;
+    console.log(string);
+}
+
+console.log();
+
+
+// 2-2 FizzBuzz
+//Write a program that uses console.log to print
+//all the numbers from 1 to 100, with two exceptions.
+//For numbers divisible by 3 print "Fizz"
+//For numbers divisible by 5 print "Buzz"
+//for both divisible by 3 and 5 print "FizzBuzz"
+let f = "Fizz";
+let b = "Buzz";
+for (let x = 0; x < 101; x++){
+    if ((x % 3 == 0) && (x % 5 == 0)) {
+        //console.log(f + b);
+    }
+    else if(x % 3 == 0){
+        //console.log(f);
+    }
+    else if(x % 5 == 0){
+        //console.log(b);
     }
     else{
-        return x;
+        //console.log(x)
     }
 }
 
-console.log(min(10,3));
-
-// 2-2 Recursion
-//Define a recursive function that corresponds to the following
-//Zero is even
-//One is odd
-//For any other number N, its evenness is the same as N-2
-function isEven(x){
-    if(x == 0){
-        return true;
-    }
-    else if(x == 1){
-        return false;
-    }
-    else if(x < 0){
-        return isEven(-x);
-    }
-    else{
-        return isEven(x - 2);
-    }
-}
-console.log(isEven(50));
-console.log(isEven(75));
-console.log(isEven(-1));
-
-// 2-3 Char count
-let wrd = "I will be the best buddy ever."
-function countChar(word,char){
-    let count = 0;
-    for(x = 0; x < wrd.length; x++){
-        if(word[x] == char){
-            count++;
+//2-3 ChessBoard
+let board = "";
+let size = 8;
+for(x = 0; x < size; x++){
+    for(y = 0; y < size; y++){
+        if((x + y) % 2 == 0){
+            board += "#";
+        }
+        else{
+            board += " ";
         }
     }
-    return count;
+    board += "\n";
 }
-console.log(countChar(wrd,'b'));
+console.log(board);
+
+

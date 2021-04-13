@@ -1,6 +1,7 @@
-// 3-1 MINIMUM
+//Chapter 3 excersises
+// 3-1 Minimum
 function min(x,y){
-    if(x > y){
+    if(y > x){
         return y;
     }
     else{
@@ -8,23 +9,40 @@ function min(x,y){
     }
 }
 
-console.log(min(4,5));
+console.log(min(10,3));
 
-// 3-2 ISEVEN
-
-function isEven(n){
-    if(n == 0){
+// 3-2 Recursion
+//Define a recursive function that corresponds to the following
+//Zero is even
+//One is odd
+//For any other number N, its evenness is the same as N-2
+function isEven(x){
+    if(x == 0){
         return true;
     }
-    else if(n == 1){
+    else if(x == 1){
         return false;
     }
-    else if(n < 0){
-        return isEven(-n);
+    else if(x < 0){
+        return isEven(-x);
     }
     else{
-        return isEven(n-2);
+        return isEven(x - 2);
     }
 }
 console.log(isEven(50));
 console.log(isEven(75));
+console.log(isEven(-1));
+
+// 3-3 Char count
+let wrd = "I will be the best buddy ever."
+function countChar(word,char){
+    let count = 0;
+    for(x = 0; x < wrd.length; x++){
+        if(word[x] == char){
+            count++;
+        }
+    }
+    return count;
+}
+console.log(countChar(wrd,'b'));
