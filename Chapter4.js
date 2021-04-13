@@ -9,3 +9,12 @@ function range(start,end){
     return array;
 }
 console.log(range(3,9));
+
+function sum(array){
+    let s = 0;
+    for (let x = 0; x < array.length; x++) {
+        s += array[x];
+    }
+    return s;
+}
+console.log(sum(range(3,9)));
