@@ -34,7 +34,7 @@ console.log(isEven(75));
 console.log(isEven(-1));
 
 // 2-3 Char count
-let wrd = "Baboon Bitch"
+let wrd = "I will be the best buddy ever."
 function countChar(word,char){
     let count = 0;
     for(x = 0; x < wrd.length; x++){
@@ -44,4 +44,4 @@ function countChar(word,char){
     }
     return count;
 }
-console.log(countChar(wrd,'B'));
+console.log(countChar(wrd,'b'));

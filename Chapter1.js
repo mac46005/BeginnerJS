@@ -62,3 +62,4 @@ for(x = 0; x < size; x++){
 }
 console.log(board);
 
+
