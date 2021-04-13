@@ -4,9 +4,17 @@
 function range(start,end,step = 1){
     let count = start;
     let array = [];
-    while (count < end + 1) {
-        array.push(count);
-        count += step;
+    if(start > end + 1){
+        while(count > end){
+            array.push(count);
+            count += step;
+        }
+    }
+    else{
+        while (count < end + 1) {
+            array.push(count);
+            count += step;
+        }
     }
     return array;
 }
