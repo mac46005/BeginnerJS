@@ -27,7 +27,7 @@ function range(start,end){
 
 
 for (var i = 0; i < 10; i++) {
-  console.log(i);
+  //console.log(i);
 }
 
 //and abracted function
@@ -45,7 +45,7 @@ function repeater(n,action){
     action(i)
   }
 }
-repeater(3,console.log);
+//repeater(3,console.log);
 
 // create a funciton value on the spot
 let labels = [];
@@ -60,6 +60,18 @@ console.log(labels);
 function greaterThan(n){
   return m => m > n;
 }
-let greaterThan10 = greaterThan(11);
-console.log(greaterThan10);
+let greaterThan10 = greaterThan(10);
+console.log(greaterThan10(11));
+
+
+//functions that change other functions.
+function noisy(f){
+  return(...args) => {
+    console.log("calling with",args);
+    let result = f(...args);
+    console.log("call with ",args,", returned", result);
+    return result;
+  }
+}
+noisy(Math.min)(3,2,1);
 
