@@ -22,3 +22,11 @@ function range(start,end){
   }
   return array;
 }
+////////////////////////////////////
+//Abstraction Repetition
+
+
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+
