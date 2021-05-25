@@ -78,3 +78,13 @@ function noisy(f){
 
 noisy(Math.min)(3,2,1);
 
+//functions that provide new types of control flow
+function unless(test,then){
+  if(!test) then();
+}
+
+repeater(3, n =>{
+  unless(n % 2 == 1,() =>{
+    console.log(n,"is even");
+  });
+});
