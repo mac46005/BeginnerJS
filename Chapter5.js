@@ -46,3 +46,10 @@ function repeater(n,action){
   }
 }
 repeater(3,console.log);
+
+// create a funciton value on the spot
+let labels = [];
+repeater(5,i => {
+  labels.push(`Unit ${i + 1}`);
+});
+console.log(labels);
