@@ -37,6 +37,12 @@ function repeat(n){
     }
 }
 
-repeat(10);
+//repeat(10);
 
-
+//a function with a funciton parameter
+function repeater(n,action){
+  for (var i = 0; i < n; i++) {
+    action(i)
+  }
+}
+repeater(3,console.log);
