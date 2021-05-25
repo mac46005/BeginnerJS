@@ -73,5 +73,6 @@ function noisy(f){
     return result;
   }
 }
+
 noisy(Math.min)(3,2,1);
 
