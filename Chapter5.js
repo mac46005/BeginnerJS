@@ -57,6 +57,8 @@ console.log(labels);
 
 /////////////////////////
 //High order functions
+
+//functions that create functions
 function greaterThan(n){
   return m => m > n;
 }
