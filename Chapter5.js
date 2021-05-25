@@ -53,3 +53,13 @@ repeater(5,i => {
   labels.push(`Unit ${i + 1}`);
 });
 console.log(labels);
+
+
+/////////////////////////
+//High order functions
+function greaterThan(n){
+  return m => m > n;
+}
+let greaterThan10 = greaterThan(11);
+console.log(greaterThan10);
+
