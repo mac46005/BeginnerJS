@@ -3,9 +3,9 @@ while(count <= 1){
   total += count;
   count += 1;
 }
-console.log(total);
+//console.log(total);
 
-console.log(sum(range(1,10)))
+//console.log(sum(range(1,10)))
 
 function sum(array){
   let result = 0;
@@ -29,4 +29,14 @@ function range(start,end){
 for (var i = 0; i < 10; i++) {
   console.log(i);
 }
+
+//and abracted function
+function repeat(n){
+  for (var i = 0; i < n; i++) {
+    console.log(i);
+    }
+}
+
+repeat(10);
+
 
