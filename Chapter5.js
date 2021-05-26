@@ -93,3 +93,7 @@ repeater(3, n =>{
 //built in array method forEach that provides
 //something life a for/of loop as a higher order function
 ["A","B"].forEach(l => console.log(l));
+
+///////////////////////////////////////////////////////
+// Script Data Set
+
