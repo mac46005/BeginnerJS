@@ -1237,9 +1237,29 @@ console.log(filter(SCRIPTS,script => script.living))
 
 console.log(SCRIPTS.filter(s => s.direction == "ttb"));
 
+/////////////////////////////////////////////////////
+// Transforming with map
 
+function map(array,tranform){
+  let mapped = [];
+  for(let element in array){
+    mapped.push(tranform(element));
+  }
+  return mapped;
+}
 
+let rtlScripts = SCRIPTS.filter(s => s.direction == "rtl");
+console.log(map(rtlScripts,s => s.name));
 
+////////////////////////////////////////////
+//Summarizing with reduce
 
+function reduce(array,combine,start){
+  let current = start;
+  for(let element of array){
+    current = combine(current,element);
+  }
+  return current;
+}
 
-
+console.log(reduce([1,2,3,4,5],(a,b) => a + b,0));
