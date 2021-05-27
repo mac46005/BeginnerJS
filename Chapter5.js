@@ -1295,3 +1295,12 @@ function average(array){
 console.log(Math.round(average(SCRIPTS.filter(s => s.living).map(s => s.year))));
 
 console.log(Math.round(average(SCRIPTS.filter(s => !s.living).map(s => s.year))));
+
+let total2 = 0,count2 = 0;
+for(let script of SCRIPTS){
+  if(scipts.living){
+    total += script.year;
+    count += 1;
+  }
+}
+console.log(Math.round(total/count));
