@@ -1298,9 +1298,26 @@ console.log(Math.round(average(SCRIPTS.filter(s => !s.living).map(s => s.year)))
 
 let total2 = 0,count2 = 0;
 for(let script of SCRIPTS){
-  if(scipts.living){
+  if(script.living){
     total += script.year;
     count += 1;
   }
 }
 console.log(Math.round(total/count));
+
+///////////////////////////////////////////////
+// String and Characters Codes
+
+function characterScript(code){
+  for(let script of SCRIPTS){
+    if(script.ranges.some(([from,to]) => {
+      return code >= from && code < to;
+    })){
+      return script;
+    }
+  }
+  return null;
+}
+console.log(characterScript(121));
+
+
