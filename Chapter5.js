@@ -1265,3 +1265,16 @@ function reduce(array,combine,start){
 console.log(reduce([1,2,3,4,5],(a,b) => a + b,0));
 
 console.log([1,2,3,4,5].reduce((a,b)=> a + b));
+
+// use reduce twice 
+function characterCount(script){
+  return script.ranges.reduce((count,[from,to]) => {
+    return count + (to - from);
+  },0);
+}
+
+console.log(SCRIPTS.reduce((a,b) => {
+  return characterCount(a) < characterCount(b) ? b : a;
+}));
+
+//////////////////////////////////////////////////////
