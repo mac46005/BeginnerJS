@@ -1278,3 +1278,12 @@ console.log(SCRIPTS.reduce((a,b) => {
 }));
 
 //////////////////////////////////////////////////////
+// Composeability
+
+let biggest = null;
+for(let script of SCRIPTS){
+  if(biggest == null || characterCount(biggest) < characterCount(script)){
+    biggest = script;
+  }
+}
+console.log(biggest);
