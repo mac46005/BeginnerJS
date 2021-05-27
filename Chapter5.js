@@ -1320,4 +1320,8 @@ function characterScript(code){
 }
 console.log(characterScript(121));
 
-
+let horseShoe = "🐎👞";
+console.log(horseShoe.length);
+console.log(horseShoe[0]);
+console.log(horseShoe.charCodeAt(0));
+console.log(horseShoe.codePointAt(0));
