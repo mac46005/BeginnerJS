@@ -33,7 +33,7 @@ for (var i = 0; i < 10; i++) {
 //and abracted function
 function repeat(n){
   for (var i = 0; i < n; i++) {
-    console.log(i);
+    //console.log(i);
     }
 }
 
@@ -52,7 +52,7 @@ let labels = [];
 repeater(5,i => {
   labels.push(`Unit ${i + 1}`);
 });
-console.log(labels);
+//console.log(labels);
 
 
 /////////////////////////
@@ -63,15 +63,15 @@ function greaterThan(n){
   return m => m > n;
 }
 let greaterThan10 = greaterThan(10);
-console.log(greaterThan10(11));
+//console.log(greaterThan10(11));
 
 
 //functions that change other functions.
 function noisy(f){
   return(...args) => {
-    console.log("calling with",args);
+    //console.log("calling with",args);
     let result = f(...args);
-    console.log("call with ",args,", returned", result);
+    //console.log("call with ",args,", returned", result);
     return result;
   }
 }
@@ -85,7 +85,7 @@ function unless(test,then){
 
 repeater(3, n =>{
   unless(n % 2 == 1,() =>{
-    console.log(n,"is even");
+    //console.log(n,"is even");
   });
 });
 
@@ -1233,9 +1233,9 @@ function filter(array,test){
   return passed;
 }
 
-console.log(filter(SCRIPTS,script => script.living))
+//onsole.log(filter(SCRIPTS,script => script.living))
 
-console.log(SCRIPTS.filter(s => s.direction == "ttb"));
+//console.log(SCRIPTS.filter(s => s.direction == "ttb"));
 
 /////////////////////////////////////////////////////
 // Transforming with map
@@ -1249,7 +1249,7 @@ function map(array,tranform){
 }
 
 let rtlScripts = SCRIPTS.filter(s => s.direction == "rtl");
-console.log(map(rtlScripts,s => s.name));
+//console.log(map(rtlScripts,s => s.name));
 
 ////////////////////////////////////////////
 //Summarizing with reduce
@@ -1262,9 +1262,9 @@ function reduce(array,combine,start){
   return current;
 }
 
-console.log(reduce([1,2,3,4,5],(a,b) => a + b,0));
+//console.log(reduce([1,2,3,4,5],(a,b) => a + b,0));
 
-console.log([1,2,3,4,5].reduce((a,b)=> a + b));
+//console.log([1,2,3,4,5].reduce((a,b)=> a + b));
 
 // use reduce twice 
 function characterCount(script){
@@ -1286,15 +1286,15 @@ for(let script of SCRIPTS){
     biggest = script;
   }
 }
-console.log(biggest);
+//console.log(biggest);
 
 function average(array){
   return array.reduce((a,b) => a + b) / array.length;
 }
 
-console.log(Math.round(average(SCRIPTS.filter(s => s.living).map(s => s.year))));
+//console.log(Math.round(average(SCRIPTS.filter(s => s.living).map(s => s.year))));
 
-console.log(Math.round(average(SCRIPTS.filter(s => !s.living).map(s => s.year))));
+//console.log(Math.round(average(SCRIPTS.filter(s => !s.living).map(s => s.year))));
 
 let total2 = 0,count2 = 0;
 for(let script of SCRIPTS){
@@ -1303,7 +1303,7 @@ for(let script of SCRIPTS){
     count += 1;
   }
 }
-console.log(Math.round(total/count));
+//console.log(Math.round(total/count));
 
 ///////////////////////////////////////////////
 // String and Characters Codes
@@ -1318,10 +1318,15 @@ function characterScript(code){
   }
   return null;
 }
-console.log(characterScript(121));
+//console.log(characterScript(121));
 
 let horseShoe = "🐎👞";
 console.log(horseShoe.length);
 console.log(horseShoe[0]);
 console.log(horseShoe.charCodeAt(0));
 console.log(horseShoe.codePointAt(0));
+
+let roseDragon = "🌹🐱‍🐉";
+for(let char of roseDragon){
+  console.log(char);
+}
