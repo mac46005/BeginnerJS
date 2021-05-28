@@ -16,3 +16,5 @@ let hungryRabbit = {type: "hungry", speak};
 
 whiterabbit.speak("Oh my ears and whiskers, how late it's getting!");
 hungryRabbit.speak("I could use a carrot right now.");
+
+speak.call(hungryRabbit,"Burp");
