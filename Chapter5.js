@@ -1321,12 +1321,31 @@ function characterScript(code){
 //console.log(characterScript(121));
 
 let horseShoe = "🐎👞";
-console.log(horseShoe.length);
-console.log(horseShoe[0]);
-console.log(horseShoe.charCodeAt(0));
-console.log(horseShoe.codePointAt(0));
+//console.log(horseShoe.length);
+//console.log(horseShoe[0]);
+//console.log(horseShoe.charCodeAt(0));
+//console.log(horseShoe.codePointAt(0));
 
 let roseDragon = "🌹🐱‍🐉";
 for(let char of roseDragon){
-  console.log(char);
+  //console.log(char);
 }
+
+///////////////////////////////////////////////////
+// Recognizing Text
+
+function countBy(items,groupName){
+  let counts = [];
+  for(let item of items){
+    let name = groupName(item);
+    let known = counts.findIndex(c => c.name == name);
+    if(known == -1){
+      counts.push({name,count: 1});
+    }
+    else{
+      counts[known].count++;
+    }
+  }
+  return counts;
+}
+console.log(countBy([1,2,3,4,5],n => n > 2));
