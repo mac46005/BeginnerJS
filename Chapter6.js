@@ -91,3 +91,9 @@ let blackRabbit = new RabbitModel("black");
 
 let object = new class{getWord(){return "hello"}};
 console.log(object.getWord());
+
+////////////////////////////////////////////////////////////
+// Overriding Derived Properties
+
+RabbitModel.prototype.teeth = "small";
+console.log(killerRabbit.teeth);
