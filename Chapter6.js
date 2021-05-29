@@ -102,3 +102,7 @@ killerRabbit.teeth = "long,sharp,and bloody";
 console.log(killerRabbit.teeth);
 console.log(blackRabbit.teeth);
 console.log(RabbitModel.prototype.teeth);
+
+console.log(Array.prototype.toString == Object.prototype.toString);
+
+console.log([1,2].toString());
