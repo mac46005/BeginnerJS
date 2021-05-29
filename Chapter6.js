@@ -69,3 +69,7 @@ Rabbit.prototype.speak = function(line){
 };
 
 let weirdRabbit = new Rabbit("weird");
+
+console.log(Object.getPrototypeOf(Rabbit));
+console.log(Object.getPrototypeOf(weirdRabbit));
+
