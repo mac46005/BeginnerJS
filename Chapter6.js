@@ -73,3 +73,19 @@ let weirdRabbit = new Rabbit("weird");
 console.log(Object.getPrototypeOf(Rabbit));
 console.log(Object.getPrototypeOf(weirdRabbit));
 
+///////////////////////////////////////////////
+// Class Notation
+
+class RabbitModel{
+    constructor(type){
+        this.type = type;
+    }
+    speak(line)
+    {
+    console.log(`The ${this.type} rabbit says '${line}'`);
+}
+}
+
+killerRabbit = new RabbitModel("Killer");
+let blackRabbit = new RabbitModel("black");
+
