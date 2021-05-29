@@ -89,3 +89,5 @@ class RabbitModel{
 killerRabbit = new RabbitModel("Killer");
 let blackRabbit = new RabbitModel("black");
 
+let object = new class{getWord(){return "hello"}};
+console.log(object.getWord());
