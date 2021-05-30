@@ -118,5 +118,6 @@ let ages = {
     Julia: 62
 }
 
+console.log(`Julia is ${ages["Julia"]}`);
 console.log("Is Jack's age known?","Jack" in ages);
 console.log("Is toString's afe known?","toString" in ages);
