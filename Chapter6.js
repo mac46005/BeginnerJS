@@ -133,5 +133,12 @@ ages.set("Julia",62);
 //console.log("Is Jack's age known?",ages.has("Jack"));
 //console.log(ages.has("toString"));
 
-console.log({x: 1}.hasOwnProperty("x"));
-console.log({x: 1}.hasOwnProperty("toString"));
+//console.log({x: 1}.hasOwnProperty("x"));
+//console.log({x: 1}.hasOwnProperty("toString"));
+
+////////////////////////////////////////////////////////////////
+// Polymorphism
+RabbitModel.prototype.ToString = function(){
+    return `a ${this.type} rabbit`;
+}
+console.log(String(blackRabbit));
