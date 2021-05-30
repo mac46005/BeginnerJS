@@ -138,7 +138,15 @@ ages.set("Julia",62);
 
 ////////////////////////////////////////////////////////////////
 // Polymorphism
-RabbitModel.prototype.ToString = function(){
+RabbitModel.prototype.toString = function(){
     return `a ${this.type} rabbit`;
 }
 console.log(String(blackRabbit));
+
+/////////////////////////////////////////////////////////////////
+// Symbols
+
+let sym = Symbol("name");
+console.log(sym == Symbol("name"));
+Rabbit.prototype[sym] == 55;
+console.log(blackRabbit[sym]);
