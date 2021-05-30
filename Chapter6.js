@@ -108,3 +108,15 @@ killerRabbit.teeth = "long,sharp,and bloody";
 //console.log([1,2].toString());
 
 console.log(Object.prototype.toString.call([1,2]));
+
+///////////////////////////////////////////////
+// Maps
+
+let ages = {
+    Boris: 39,
+    Liang: 22,
+    Julia: 62
+}
+
+console.log("Is Jack's age known?","Jack" in ages);
+console.log("Is toString's afe known?","toString" in ages);
