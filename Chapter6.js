@@ -6,7 +6,7 @@ rabbit.speak = function(line){
 };
 
 
-rabbit.speak("Blah");
+//rabbit.speak("Blah");
 
 function speak(line){
     console.log(`the ${this.type} rabbit says '${line}'`);
@@ -14,10 +14,10 @@ function speak(line){
 let whiterabbit = {type: "white",speak};
 let hungryRabbit = {type: "hungry", speak};
 
-whiterabbit.speak("Oh my ears and whiskers, how late it's getting!");
-hungryRabbit.speak("I could use a carrot right now.");
+//whiterabbit.speak("Oh my ears and whiskers, how late it's getting!");
+//hungryRabbit.speak("I could use a carrot right now.");
 
-speak.call(hungryRabbit,"Burp");
+//speak.call(hungryRabbit,"Burp");
 
 function normalize(){
     console.log(this.coords.map(n => n / this.length));
@@ -29,16 +29,16 @@ normalize.call({coords: [0,2,3],length: 5});
 // Prototypes
 
 let empty = {};
-console.log(empty.toString);
-console.log(empty.toString());
+//console.log(empty.toString);
+//console.log(empty.toString());
 
-console.log(Object.getPrototypeOf({}) == Object.prototype);
+//console.log(Object.getPrototypeOf({}) == Object.prototype);
 
-console.log(Object.getPrototypeOf(Object.prototype));
+//console.log(Object.getPrototypeOf(Object.prototype));
 
-console.log(Object.getPrototypeOf(Math.max) == Function.prototype);
+//console.log(Object.getPrototypeOf(Math.max) == Function.prototype);
 
-console.log(Object.getPrototypeOf([]) == Array.prototype);
+//console.log(Object.getPrototypeOf([]) == Array.prototype);
 
 let protoRabbit = {
     speak(line){
@@ -49,7 +49,7 @@ let protoRabbit = {
 
 let killerRabbit = Object.create(protoRabbit);
 killerRabbit.type = "killer";
-killerRabbit.speak("SKREEEEEEEE BITCH");
+//killerRabbit.speak("SKREEEEEEEE BITCH");
 
 
 /////////////////////////////////////////////////
@@ -70,8 +70,8 @@ Rabbit.prototype.speak = function(line){
 
 let weirdRabbit = new Rabbit("weird");
 
-console.log(Object.getPrototypeOf(Rabbit));
-console.log(Object.getPrototypeOf(weirdRabbit));
+//console.log(Object.getPrototypeOf(Rabbit));
+//console.log(Object.getPrototypeOf(weirdRabbit));
 
 ///////////////////////////////////////////////
 // Class Notation
@@ -90,19 +90,21 @@ killerRabbit = new RabbitModel("Killer");
 let blackRabbit = new RabbitModel("black");
 
 let object = new class{getWord(){return "hello"}};
-console.log(object.getWord());
+//console.log(object.getWord());
 
 ////////////////////////////////////////////////////////////
 // Overriding Derived Properties
 
 RabbitModel.prototype.teeth = "small";
-console.log(killerRabbit.teeth);
+//console.log(killerRabbit.teeth);
 
 killerRabbit.teeth = "long,sharp,and bloody";
-console.log(killerRabbit.teeth);
-console.log(blackRabbit.teeth);
-console.log(RabbitModel.prototype.teeth);
+//console.log(killerRabbit.teeth);
+//console.log(blackRabbit.teeth);
+//console.log(RabbitModel.prototype.teeth);
 
-console.log(Array.prototype.toString == Object.prototype.toString);
+//console.log(Array.prototype.toString == Object.prototype.toString);
 
-console.log([1,2].toString());
+//console.log([1,2].toString());
+
+console.log(Object.prototype.toString.call([1,2]));
