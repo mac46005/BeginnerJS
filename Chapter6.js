@@ -35,7 +35,7 @@ class MatrixIterator{
         let value = {
             x: this.x,
             y: this.y,
-            value: this.matrix.get(this.x,this.y);
+            value: this.matrix.get(this.x,this.y)
         }
 
         this.x++;
@@ -48,3 +48,14 @@ class MatrixIterator{
         return {value,done: false}
     }
 }
+
+Matrix.prototype[Symbol.iterator] = function(){
+    return new MatrixIterator(this);
+}
+
+let matrix = new Matrix(2,2,(x,y) => `value ${x} ${y}`);
+for(let {x,y,value} of matrix){
+    console.log(x,y,value);
+}
+
+//MEAL CARD #4324
