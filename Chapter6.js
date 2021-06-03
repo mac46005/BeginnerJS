@@ -51,3 +51,10 @@ class SymmetricMatrix extends Matrix{
         }
     }
 }
+
+
+console.log(new SymmetricMatrix(2) instanceof SymmetricMatrix);
+console.log(new SymmetricMatrix(2) instanceof Matrix);
+console.log(new Matrix(2,2) instanceof SymmetricMatrix);
+console.log([1] instanceof Array);
+
