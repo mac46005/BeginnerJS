@@ -63,3 +63,16 @@ console.log(first.place);
 let object = Object.freeze({value:5});
 object.value = 10;
 console.log(object.value);
+
+function runRobot(state,robot,memory){
+    for(let turn = ;;turn++){
+        if(state.parcels.length == 0){
+            console.log(`Done in ${turn} turns`);
+            break;
+        }
+        let action = robot(state,memory);
+        state = state.move(action.direction);
+        memory = action.memory;
+        console.log(`Moved to ${action.direction}`);
+    }
+}
